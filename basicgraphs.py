@@ -53,7 +53,7 @@ plt.ylabel('Price')
 plt.legend([ticker1, ticker2])
 plt.savefig('Line_Graph_Closing_Prices.png', dpi=300)
 
-#Graph of QURE's price and Moving Averages
+#Graph of stock price and Moving Averages
 plt.figure(figsize=(12, 6))
 data['Close'][ticker1].plot(label='{0} Close Price'.format(ticker1), color='skyblue')
 data[f'{ticker1}_SMA50'].plot(label='50-Day SMA', color='orange')
@@ -63,7 +63,7 @@ plt.ylabel('Price (USD)')
 plt.legend()
 plt.grid(True)
 plt.savefig("Closing_Moving_Averages.png", dpi=300)
-#Histogram of QURE's daily returns
+#Histogram of stock daily returns
 plt.figure(figsize=(10,6))
 daily_returns['Close'][ticker1].dropna().hist(bins=1000, color='purple', alpha=0.7)
 plt.title(f'Distribution of {ticker1} Daily Returns')
